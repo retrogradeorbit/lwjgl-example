@@ -87,7 +87,7 @@
     (GLFW/glfwPollEvents)))
 
 (defn -main
-  "I don't do a whole lot ... yet."
+  "A port of the java example here: https://www.lwjgl.org/guide"
   [& args]
   (println (str "Hello LWGL " (Version/getVersion) "!"))
 
