@@ -12,4 +12,12 @@
   :jvm-opts ["-Djava.library.path=./"]
   :main ^:skip-aot lwjgl-example.core
   :target-path "target/%s"
-  :profiles {:uberjar {:aot :all}})
+  :profiles {:uberjar {:aot :all
+                       :jvm-opts ["-Dclojure.compiler.direct-linking=true"
+                                  "-Dclojure.spec.skip-macros=true"
+                                  "-Djava.library.path=./"
+                                  ]}
+             :native-image {:aot :all
+                            :jvm-opts ["-Dclojure.compiler.direct-linking=true"
+                                       "-Dclojure.spec.skip-macros=true"
+                                       "-Djava.library.path=./"]}})
