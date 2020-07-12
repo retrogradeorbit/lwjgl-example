@@ -89,6 +89,10 @@
 (defn -main
   "A port of the java example here: https://www.lwjgl.org/guide"
   [& args]
+  (println "loading...")
+  (clojure.lang.RT/loadLibrary "lwjgl")
+  (clojure.lang.RT/loadLibrary "lwjgl_opengl")
+  (clojure.lang.RT/loadLibrary "glfw")
   (println (str "Hello LWGL " (Version/getVersion) "!"))
 
   (let [window (init!)]
