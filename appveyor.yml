@@ -59,9 +59,11 @@ build_script:
 
     copy glfw.dll jpack
 
-    jpackage --name lwjgl-example --input jpack --main-jar lwjgl-example-0.1.0-SNAPSHOT-standalone.jar
+    jpackage --name lwjgl-example --input jpack --main-jar lwjgl-example-0.1.0-SNAPSHOT-standalone.jar --license-file LICENSE
 
     dir
+
+    dir jpack
 
     jpackage --help
 
