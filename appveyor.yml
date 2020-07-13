@@ -41,6 +41,8 @@ build_script:
 
     java -version
 
+    lein uberjar
+
 test: off
 
 artifacts:
