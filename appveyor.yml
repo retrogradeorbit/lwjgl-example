@@ -41,6 +41,8 @@ build_script:
 
     java -version
 
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://build.lwjgl.org/stable/windows/x64/lwjgl.dll', 'lwjgl.dll')
+
     lein uberjar
 
 test: off
