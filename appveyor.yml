@@ -43,7 +43,24 @@ build_script:
 
     powershell -Command "(New-Object Net.WebClient).DownloadFile('https://build.lwjgl.org/stable/windows/x64/lwjgl.dll', 'lwjgl.dll')
 
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://build.lwjgl.org/stable/windows/x64/lwjgl_opengl.dll', 'lwjgl_opengl.dll')
+
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://build.lwjgl.org/stable/windows/x64/glfw.dll', 'glfw.dll')
+
     lein uberjar
+
+    mkdir jpack
+
+    copy target\uberjar\lwjgl-example-0.1.0-SNAPSHOT-standalone.jar jpack
+
+    copy lwjgl.dll jpack
+
+    copy lwjgl_opengl.dll jpack
+
+    copy glfw.dll jpack
+
+    jpackage --name lwjgl-example --input jpack --main-jar lwjgl-example-0.1.0-SNAPSHOT-standalone.jar
+
 
 test: off
 
