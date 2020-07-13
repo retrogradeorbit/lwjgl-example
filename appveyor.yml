@@ -61,7 +61,7 @@ build_script:
 
     copy glfw.dll jpack
 
-    jpackage --name lwjgl-example --input jpack --main-jar lwjgl-example-0.1.0-SNAPSHOT-standalone.jar --license-file LICENSE --type exe
+    jpackage --name lwjgl-example --input jpack --main-jar lwjgl-example-0.1.0-SNAPSHOT-standalone.jar --license-file LICENSE --type msi
 
     dir
 
