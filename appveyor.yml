@@ -61,9 +61,9 @@ build_script:
 
     copy glfw.dll jpack
 
-    jpackage --name lwjgl-example --input jpack --main-jar lwjgl-example-0.1.0-SNAPSHOT-standalone.jar --license-file LICENSE --type msi --win-console
+    jpackage --name lwjglexample --input jpack --main-jar lwjgl-example-0.1.0-SNAPSHOT-standalone.jar --license-file LICENSE --type msi --win-console
 
-    jpackage --name lwjgl-example --input jpack --main-jar lwjgl-example-0.1.0-SNAPSHOT-standalone.jar --license-file LICENSE --type exe --win-console
+    jpackage --name lwjglexample --input jpack --main-jar lwjgl-example-0.1.0-SNAPSHOT-standalone.jar --license-file LICENSE --type exe --win-console
 
     dir
 
@@ -74,7 +74,7 @@ build_script:
 test: off
 
 artifacts:
-- path: lwjgl-example-*.msi
-  name: lwjgl-example-msi
-- path: lwjgl-example-*.exe
-  name: lwjgl-example-exe
+- path: lwjglexample-*.msi
+  name: lwjglexample-msi
+- path: lwjglexample-*.exe
+  name: lwjglexample-exe
