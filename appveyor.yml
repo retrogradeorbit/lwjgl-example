@@ -43,11 +43,11 @@ build_script:
 
     java -version
 
-    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://build.lwjgl.org/stable/windows/x64/lwjgl.dll', 'lwjgl.dll')
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://build.lwjgl.org/stable/windows/x64/lwjgl.dll', 'lwjgl.dll')"
 
-    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://build.lwjgl.org/stable/windows/x64/lwjgl_opengl.dll', 'lwjgl_opengl.dll')
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://build.lwjgl.org/stable/windows/x64/lwjgl_opengl.dll', 'lwjgl_opengl.dll')"
 
-    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://build.lwjgl.org/stable/windows/x64/glfw.dll', 'glfw.dll')
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://build.lwjgl.org/stable/windows/x64/glfw.dll', 'glfw.dll')"
 
     lein uberjar
 
