@@ -63,6 +63,8 @@ build_script:
 
     dir
 
+    jpackage --help
+
 test: off
 
 artifacts:
