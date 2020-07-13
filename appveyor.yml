@@ -63,6 +63,8 @@ build_script:
 
     jpackage --name lwjgl-example --input jpack --main-jar lwjgl-example-0.1.0-SNAPSHOT-standalone.jar --license-file LICENSE --type msi
 
+    jpackage --name lwjgl-example --input jpack --main-jar lwjgl-example-0.1.0-SNAPSHOT-standalone.jar --license-file LICENSE --type exe
+
     dir
 
     dir jpack
@@ -72,5 +74,7 @@ build_script:
 test: off
 
 artifacts:
-- path: lwjgl-example-*-windows-amd64.zip
-  name: lwjgl-example
+- path: lwjgl-example-*.msi
+  name: lwjgl-example-msi
+- path: lwjgl-example-*.exe
+  name: lwjgl-example-exe
